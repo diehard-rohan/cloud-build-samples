@@ -14,7 +14,7 @@ steps:
   - 'twine'
   - 'upload'
   - '--repository-url'
-  - 'https:///us-east1-python.pkg.dev/rohankhurana-test-project/my-repo/'
+  - 'https://us-east1-python.pkg.dev/rohankhurana-test-project/my-repo/'
   - 'dist/*'
   - '--verbose'
 - name: python
