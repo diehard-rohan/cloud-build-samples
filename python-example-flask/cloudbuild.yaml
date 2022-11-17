@@ -25,3 +25,5 @@ steps:
   - 'https://us-east1-python.pkg.dev/rohankhurana-test-project/my-repo/'
   - 'acme.sql'
   - '--verbose'
+options:
+  logging: CLOUD_LOGGING_ONLY
