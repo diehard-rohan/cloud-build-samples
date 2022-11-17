@@ -5,9 +5,23 @@ steps:
 - name: python
   entrypoint: python
   args:
+  - 'setup.py'
+  - 'sdist'
+- name: python
+  entrypoint: python
+  args:
   - '-m'
   - 'twine'
   - 'upload'
   - '--repository-url'
-  - 'https://${_LOCATION}-python.pkg.dev/$PROJECT_ID/${_REPOSITORY}/'
+  - 'https:///us-east1-python.pkg.dev/rohankhurana-test-project/my-repo/'
   - 'dist/*'
+  - '--verbose'
+- name: python
+  entrypoint: pip
+  args:
+  - 'install'
+  - '--index-url'
+  - 'https://us-east1-python.pkg.dev/rohankhurana-test-project/my-repo/'
+  - 'acme.sql'
+  - '--verbose'
